@@ -12,7 +12,7 @@ EGPREFIX = $(PREFIX)/share/doc/nsxiv/examples
 OPT_DEP_DEFAULT = 1
 
 # autoreload backend: 1 = inotify, 0 = none
-HAVE_INOTIFY = $(OPT_DEP_DEFAULT)
+HAVE_INOTIFY = 0
 
 # optional dependencies, see README for more info
 HAVE_LIBFONTS = $(OPT_DEP_DEFAULT)
@@ -21,7 +21,7 @@ HAVE_LIBEXIF  = $(OPT_DEP_DEFAULT)
 HAVE_LIBWEBP  = $(OPT_DEP_DEFAULT)
 
 # CFLAGS, any optimization flags goes here
-CFLAGS = -std=c99 -Wall -pedantic
+CFLAGS = -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -std=c99 -Wall -pedantic
 
 # icons that will be installed via `make icon`
 ICONS = 16x16.png 32x32.png 48x48.png 64x64.png 128x128.png

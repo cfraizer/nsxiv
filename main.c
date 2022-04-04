@@ -413,7 +413,7 @@ static void update_info(void)
 			bar_put(l, "Caching... %0*d", fw, tns.initnext + 1);
 		else
 			strncpy(l->buf, files[fileidx].name, l->size);
-		bar_put(r, "%s%0*d/%d", mark, fw, fileidx + 1, filecnt);
+		bar_put(r, "%s%0*d/%d     ", mark, fw, fileidx + 1, filecnt);
 	} else {
 		bar_put(r, "%s", mark);
 		if (img.ss.on) {
@@ -429,7 +429,7 @@ static void update_info(void)
 			for (fn = 0, i = img.multi.cnt; i > 0; fn++, i /= 10);
 			bar_put(r, "%0*d/%d" BAR_SEP, fn, img.multi.sel + 1, img.multi.cnt);
 		}
-		bar_put(r, "%0*d/%d", fw, fileidx + 1, filecnt);
+		bar_put(r, "%0*d/%d          ", fw, fileidx + 1, filecnt);
 		if (info.f.err)
 			strncpy(l->buf, files[fileidx].name, l->size);
 	}

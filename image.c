@@ -26,7 +26,10 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <sys/types.h>
-#include <unistd.h>
+#define __DARWIN_C_LEVEL __DARWIN_C_FULL
+
+#include "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/unistd.h"
+// #include <unistd.h>
 
 #if HAVE_LIBEXIF
 #include <libexif/exif-data.h>
